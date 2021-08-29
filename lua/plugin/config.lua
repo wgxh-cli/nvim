@@ -18,7 +18,6 @@ require'nvim-treesitter.configs'.setup {
 
 --- vscode.nvim
 vim.g.vscode_style = "dark"
-vim.cmd'colorscheme vscode'
 
 --- nvim-tree.lua
 nmap('<Leader>e', ':NvimTreeToggle<CR>')
@@ -104,3 +103,8 @@ require("nvim-autopairs.completion.cmp").setup{
 
 --- vista.vim
 nmap('<Leader>tt', ':Vista<CR>')
+
+
+
+--- Set colors scheme
+vim.api.nvim_command('colors onedark')

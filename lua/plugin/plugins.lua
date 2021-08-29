@@ -44,6 +44,7 @@ return require('packer').startup({
     use 'folke/lsp-colors.nvim'
     use 'theniceboy/eleline.vim'
     use 'ojroques/vim-scrollstatus'
+    use 'navarasu/onedark.nvim'
   end, config = {
     display = {
       open_fn = function()
