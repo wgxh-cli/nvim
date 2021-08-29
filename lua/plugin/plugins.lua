@@ -16,13 +16,12 @@ return require('packer').startup(function()
   use 'tpope/vim-surround'
   use 'tpope/vim-commentary'
   use 'kyazdani42/nvim-web-devicons'
-  use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview' }
+  use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install' }
   use { 'junegunn/fzf', run = './install'  }
   use 'junegunn/fzf.vim'
   use 'kyazdani42/nvim-tree.lua'
   use 'folke/which-key.nvim'
   use 'ggandor/lightspeed.nvim'
-
 
   -- syntax
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
