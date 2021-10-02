@@ -11,5 +11,6 @@ o.swapfile = false
 o.signcolumn = 'number'
 o.lazyredraw = true
 o.mouse = 'a'
+o.scrolloff = 5
 
 vim.g.mapleader = ' '

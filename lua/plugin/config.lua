@@ -13,7 +13,13 @@ require'nvim-treesitter.configs'.setup {
   ensure_installed = "all",
   highlight = {
     enable = true,
-  }
+  },
+  autotag = {
+    enable = true,
+  },
+  indent = {
+    enable = true,
+  },
 }
 
 --- vscode.nvim
@@ -34,17 +40,13 @@ cmp.setup {
     end
   },
   mapping = {
-    -- ['<Tab>'] = cmp.mapping.next_item(),
-    -- ['<S-Tab>'] = cmp.mapping.prev_item(),
-    -- ['<C-d>'] = cmp.mapping.scroll(-4),
-    -- ['<C-f>'] = cmp.mapping.scroll(4),
-    -- ['<C-p>'] = cmp.mapping.complete(),
     ['<C-z>'] = cmp.mapping.close(),
     ['<C-y>'] = cmp.mapping.confirm()
   },
   sources = {
     { name = 'buffer' },
     { name = "nvim_lsp" },
+    { name = 'orgmode' },
   },
   completion = {
     completeopt = 'menu,menuone,noinsert',
@@ -104,7 +106,54 @@ require("nvim-autopairs.completion.cmp").setup{
 --- vista.vim
 nmap('<Leader>tt', ':Vista<CR>')
 
+--- minimap.vim
+vim.g.minimap_auto_start = 0
+vim.g.minimap_auto_start_win_enter = 1
+
+--- indent-blankline.nvim
+vim.opt.listchars = {
+  space = "⋅",
+  eol = "↴",
+}
+
+require("indent_blankline").setup {
+  show_end_of_line = true,
+}
+
+--- lsp_signature.nvim
+require'lsp_signature'.setup{
+  bind = true,
+}
+
+--- toggleterm.nvim
+require'toggleterm'.setup{
+  open_mapping = [[<C-\>]],
+  direction = 'horizontal',
+  close_on_exit = true,
+}
+function _G.set_terminal_keymaps()
+  vim.api.nvim_buf_set_keymap(0, 't', '<C-h>', [[<C-\><C-n><C-W>h]], nopts)
+  vim.api.nvim_buf_set_keymap(0, 't', '<C-j>', [[<C-\><C-n><C-W>j]], nopts)
+  vim.api.nvim_buf_set_keymap(0, 't', '<C-k>', [[<C-\><C-n><C-W>k]], nopts)
+  vim.api.nvim_buf_set_keymap(0, 't', '<C-l>', [[<C-\><C-n><C-W>l]], nopts)
+end
+vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
+
+--- orgmode.nvim
+require'orgmode'.setup{
+  org_agenda_files = { '~/Documents/**/*' },
+  org_default_notes_file = '~/Documents/index.org',
+}
+
+--- circles.nvim
+require"circles".setup{
+  icons = {
+    empty = "",
+    filled = "",
+    lsp_prefix = ""
+  },
+  lsp = true
+}
 
 
---- Set colors scheme
-vim.api.nvim_command('colors onedark')
+vim.api.nvim_command('colors gruvbox-flat')

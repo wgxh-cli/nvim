@@ -20,7 +20,7 @@ require('cmp_nvim_lsp').setup {}
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.documentationFormat = { 'markdown' }
-capabilities.textDocument.completion.completionItem.snippetSupport = true
+capabilities.textDocument.completion.completionItem.snippetSupport = false
 capabilities.textDocument.completion.completionItem.preselectSupport = true
 capabilities.textDocument.completion.completionItem.insertReplaceSupport = true
 capabilities.textDocument.completion.completionItem.labelDetailsSupport = true
@@ -57,7 +57,7 @@ for i, v in ipairs(ls) do
       buf_set_keymap('n', '<Leader>sl', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
       buf_set_keymap('n', '<Leader>fi', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 
-      require "lsp_signature".on_attach()  -- Note: add in lsp client on-attach
+      require "lsp_signature".on_attach()
     end,
     capabilities = capabilities,
   }

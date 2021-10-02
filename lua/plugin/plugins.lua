@@ -21,6 +21,8 @@ return require('packer').startup({
     use 'folke/trouble.nvim'
     use 'gfanto/fzf-lsp.nvim'
     use 'liuchengxu/vista.vim'
+    use 'hrsh7th/vim-vsnip'
+    use 'hrsh7th/vim-vsnip-integ'
 
     -- tools
     use 'tpope/vim-surround'
@@ -32,11 +34,19 @@ return require('packer').startup({
     use 'kyazdani42/nvim-tree.lua'
     use 'folke/which-key.nvim'
     use 'ggandor/lightspeed.nvim'
+    use {
+      'wfxr/minimap.vim',
+      run = 'cargo install --locked code-minimap',
+    }
+    use "akinsho/toggleterm.nvim"
 
     -- syntax
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use 'windwp/nvim-autopairs'
     use 'gpanders/editorconfig.nvim'
+    use 'lukas-reineke/indent-blankline.nvim'
+    use 'kristijanhusak/orgmode.nvim'
+    use 'windwp/nvim-ts-autotag'
 
     -- beautify
     use 'Mofiqul/vscode.nvim'
@@ -45,6 +55,19 @@ return require('packer').startup({
     use 'theniceboy/eleline.vim'
     use 'ojroques/vim-scrollstatus'
     use 'navarasu/onedark.nvim'
+    use 'Th3Whit3Wolf/space-nvim'
+    use 'yashguptaz/calvera-dark.nvim'
+    use 'morhetz/gruvbox'
+    use 'glepnir/zephyr-nvim'
+    use "savq/melange"
+    use {
+      "projekt0n/circles.nvim",
+      requires = {{"kyazdani42/nvim-web-devicons"}, {"kyazdani42/nvim-tree.lua", opt = true}}
+    }
+    use "projekt0n/github-nvim-theme"
+    use 'Iron-E/nvim-soluarized'
+    use 'ray-x/material_plus.nvim'
+    use 'eddyekofo94/gruvbox-flat.nvim'
   end, config = {
     display = {
       open_fn = function()
