@@ -34,4 +34,6 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
 
 Plug 'mhinz/vim-startify'
+
+Plug 'ggandor/lightspeed.nvim'
 call plug#end()
