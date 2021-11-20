@@ -1,39 +1,6 @@
-# neovim configuration of me
+# Steven Jostar's neovim configure file.
+Hi everyone! I'm Steven.
 
-It has got three lua modules:
-Note:
-> `init.lua` is used to load other files under the module.
+I like geek, so I like neovim very much.
 
-1. `core`
-  - `init.lua`
-  - `settings.lua`
-
-    Editor basic configs.
-  - `keymaps.lua`
-
-    Editor keymap configs.
-2. `plugin`
-  - `init.lua`
-  - `plugins.lua`
-
-    Plugins list.
-  - `config.lua`
-
-    Configure plugins.
-3. `lsp`
-  - `init.lua`
-  - `config.lua`
-
-    Load lsp and configure ls.
-  - `diasnogtics.lua`
-
-    Configure diasnogtics.
-
-## Lsp
-**Lsp client** : `nvim-lspconfig`, it just simplify the nvim built-in lsp config.
-
-**Auto completion** : `nvim-cmp` and its `sources`.
-
-**Symbol outline** : `vista.vim`.
-
-**Signature show** : `lsp_signature.nvim`
+I will share my config files to you. You can visit it.

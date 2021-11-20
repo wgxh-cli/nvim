@@ -7,5 +7,21 @@
 	},
 	"plugin/editor.vim": {
 		"type": "editor"
+	},
+	"plugin/configs/*.vim": {
+		"type": "bvconfig",
+		"alternate": "after/plugin/{}.vim"
+	},
+	"plugin/configs/*.lua": {
+		"type": "blconfig",
+		"alternate": "after/plugin/{}.lua"
+	},
+	"after/plugin/*.vim": {
+		"type": "avconfig",
+		"alternate": "plugin/{}.vim"
+	},
+	"after/plugin/*.lua": {
+		"type": "alconfig",
+		"alternate": "plugin/{}.lua"
 	}
 }
