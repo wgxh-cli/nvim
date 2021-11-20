@@ -1,0 +1,11 @@
+{
+	"init.vim": {
+		"type": "plug"
+	},
+	"plugin/keymaps.vim": {
+		"type": "keymaps"
+	},
+	"plugin/editor.vim": {
+		"type": "editor"
+	}
+}
