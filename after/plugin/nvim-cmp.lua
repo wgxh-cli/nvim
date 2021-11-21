@@ -16,7 +16,7 @@ cmp.setup {
 		})),
 		['<C-b>'] = cmp.mapping.scroll_docs(-4),
 		['<C-f>'] = cmp.mapping.scroll_docs(4),
-		['<CR>'] = cmp.mapping.confirm({ select = true }),
+		['<CR>'] = cmp.mapping.confirm({ select = false }),
 	},
 	sources = cmp.config.sources({
 		{ name = 'nvim_lsp' },
@@ -27,5 +27,17 @@ cmp.setup {
 	}),
   formatting = {
     format = lspkind.cmp_format({with_text = false, maxwidth = 50})
-  }
+  },
+  cmp.setup.cmdline('/', {
+    sources = {
+      { name = 'buffer' }
+    }
+  }),
+  cmp.setup.cmdline(':', {
+    sources = cmp.config.sources({
+      { name = 'path' }
+    }, {
+      { name = 'cmdline' }
+    })
+  }),
 }
