@@ -2,6 +2,7 @@ call plug#begin('$HOME/.config/nvim/plugged/')
 Plug 'editorconfig/editorconfig-vim'
 Plug 'windwp/nvim-autopairs'
 Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'RRethy/vim-illuminate'
 
 Plug 'theniceboy/nvim-deus'
 Plug 'eddyekofo94/gruvbox-flat.nvim'
@@ -11,6 +12,7 @@ Plug 'Th3Whit3Wolf/one-nvim'
 Plug 'shaeinst/roshnivim-cs'
 Plug 'rafamadriz/neon'
 Plug 'christianchiarulli/nvcode-color-schemes.vim'
+Plug 'nvim-lualine/lualine.nvim'
 
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'p00f/nvim-ts-rainbow'
@@ -37,6 +39,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/lsp-status.nvim'
 Plug 'folke/trouble.nvim'
 Plug 'williamboman/nvim-lsp-installer'
+Plug 'rinx/lspsaga.nvim'
 
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'

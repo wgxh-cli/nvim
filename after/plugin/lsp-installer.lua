@@ -10,6 +10,10 @@ installer.on_server_ready(function(server)
 					border = 'single'
 				}
 			}
+			require'illuminate'.on_attach(client)
+			vim.api.nvim_command [[ hi def link LspReferenceText CursorLine ]]
+			vim.api.nvim_command [[ hi def link LspReferenceWrite CursorLine ]]
+			vim.api.nvim_command [[ hi def link LspReferenceRead CursorLine ]]
 		end,
 		capabilities = capabilities,
 	}

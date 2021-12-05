@@ -16,3 +16,10 @@ nmap <C-j> <C-w><C-j>
 nmap <C-k> <C-w><C-k>
 nmap <C-l> <C-w><C-l>
 nmap <Leader>x :x<CR>
+
+" About quickfix
+nmap +c :copen<CR>
+nmap -c :cclose<CR>
+nmap ]c :cnext<CR>
+nmap [c :cprev<CR>
+
