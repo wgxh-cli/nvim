@@ -1,7 +1,7 @@
 require'lualine'.setup{
 	options = {
 		icon_enabled = true,
-		theme = 'gruvbox-flat'
+		theme = 'auto'
 	},
 	extensions = {
 		'quickfix'

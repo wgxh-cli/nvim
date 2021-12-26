@@ -1,1 +1,1 @@
-colors gruvbox-flat
+colors doom-one
