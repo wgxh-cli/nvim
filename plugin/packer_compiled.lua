@@ -116,6 +116,12 @@ _G.packer_plugins = {
     path = "/home/stevenx/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
+  ["nvim-autopairs"] = {
+    config = { 'require("config/autopairs")' },
+    loaded = true,
+    path = "/home/stevenx/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
+  },
   ["nvim-cmp"] = {
     config = { 'require("config/cmp")' },
     loaded = true,
@@ -197,18 +203,22 @@ time([[Config for which-key.nvim]], false)
 time([[Config for alpha-nvim]], true)
 require("config/alpha")
 time([[Config for alpha-nvim]], false)
--- Config for: nvim-lspconfig
-time([[Config for nvim-lspconfig]], true)
-require("config/lsp")
-time([[Config for nvim-lspconfig]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-require("config/telescope")
-time([[Config for telescope.nvim]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
 require("config/nvim-tree")
 time([[Config for nvim-tree.lua]], false)
+-- Config for: nvim-lspconfig
+time([[Config for nvim-lspconfig]], true)
+require("config/lsp")
+time([[Config for nvim-lspconfig]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+require("config/autopairs")
+time([[Config for nvim-autopairs]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+require("config/telescope")
+time([[Config for telescope.nvim]], false)
 -- Config for: null-ls.nvim
 time([[Config for null-ls.nvim]], true)
 require("config/null-ls")

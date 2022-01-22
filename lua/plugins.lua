@@ -26,10 +26,6 @@ use({
   "jose-elias-alvarez/null-ls.nvim",
   config = get_config("null-ls"),
 })
-use({
-  "nvim-lua/lsp-status.nvim",
-  config = get_config("lsp-utils"),
-})
 
 use({ "editorconfig/editorconfig-vim" })
 use({
@@ -55,6 +51,10 @@ use({
 use({
   "folke/which-key.nvim",
   config = get_config("which-key"),
+})
+use({
+  "windwp/nvim-autopairs",
+  config = get_config("autopairs"),
 })
 
 use({
