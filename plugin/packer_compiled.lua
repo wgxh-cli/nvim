@@ -75,6 +75,12 @@ _G.packer_plugins = {
     path = "/home/stevenx/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
+  ["circles.nvim"] = {
+    config = { 'require("config/circles")' },
+    loaded = true,
+    path = "/home/stevenx/.local/share/nvim/site/pack/packer/start/circles.nvim",
+    url = "https://github.com/projekt0n/circles.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/stevenx/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -104,6 +110,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/stevenx/.local/share/nvim/site/pack/packer/start/editorconfig-vim",
     url = "https://github.com/editorconfig/editorconfig-vim"
+  },
+  ["gitsigns.nvim"] = {
+    config = { 'require("config/gitsigns")' },
+    loaded = true,
+    path = "/home/stevenx/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   ["nest.nvim"] = {
     loaded = true,
@@ -187,10 +199,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-require("config/treesitter")
-time([[Config for nvim-treesitter]], false)
+-- Config for: nvim-lspconfig
+time([[Config for nvim-lspconfig]], true)
+require("config/lsp")
+time([[Config for nvim-lspconfig]], false)
 -- Config for: nvim-cmp
 time([[Config for nvim-cmp]], true)
 require("config/cmp")
@@ -203,14 +215,22 @@ time([[Config for which-key.nvim]], false)
 time([[Config for alpha-nvim]], true)
 require("config/alpha")
 time([[Config for alpha-nvim]], false)
+-- Config for: space-nvim
+time([[Config for space-nvim]], true)
+require("config/theme")
+time([[Config for space-nvim]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
 require("config/nvim-tree")
 time([[Config for nvim-tree.lua]], false)
--- Config for: nvim-lspconfig
-time([[Config for nvim-lspconfig]], true)
-require("config/lsp")
-time([[Config for nvim-lspconfig]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+require("config/gitsigns")
+time([[Config for gitsigns.nvim]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+require("config/treesitter")
+time([[Config for nvim-treesitter]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 require("config/autopairs")
@@ -223,10 +243,10 @@ time([[Config for telescope.nvim]], false)
 time([[Config for null-ls.nvim]], true)
 require("config/null-ls")
 time([[Config for null-ls.nvim]], false)
--- Config for: space-nvim
-time([[Config for space-nvim]], true)
-require("config/theme")
-time([[Config for space-nvim]], false)
+-- Config for: circles.nvim
+time([[Config for circles.nvim]], true)
+require("config/circles")
+time([[Config for circles.nvim]], false)
 if should_profile then save_profiles() end
 
 end)

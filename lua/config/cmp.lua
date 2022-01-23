@@ -28,11 +28,4 @@ cmp.setup({
       { name = "buffer" },
     },
   }),
-  cmp.setup.cmdline(":", {
-    sources = {
-      { name = "path" },
-    }, {
-      { name = "cmdline" }
-    }
-  }),
 })

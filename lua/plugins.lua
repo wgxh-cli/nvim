@@ -65,3 +65,15 @@ use({
   "goolord/alpha-nvim",
   config = get_config("alpha")
 })
+use({
+  "projekt0n/circles.nvim",
+  config = get_config("circles"),
+})
+use({
+  'lewis6991/gitsigns.nvim',
+  requires = {
+    'nvim-lua/plenary.nvim'
+  },
+  config = get_config("gitsigns")
+})
+
