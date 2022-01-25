@@ -1,1 +1,1 @@
-vim.api.nvim_exec("colorscheme space-nvim", true)
+vim.api.nvim_exec("colorscheme doom-one", true)

@@ -2,7 +2,9 @@ local packer = require("packer")
 local get_config = function(name)
   return string.format([[require("config/%s")]], name)
 end
-packer.init()
+packer.init({
+  git = { default_url_format = "git@github.com:%s" },
+})
 local use = packer.use
 packer.reset()
 
@@ -56,11 +58,16 @@ use({
   "windwp/nvim-autopairs",
   config = get_config("autopairs"),
 })
+use({
+  "beauwilliams/focus.nvim",
+  config = get_config("focus"),
+})
 
 use({
   "Th3Whit3Wolf/space-nvim",
   config = get_config("theme")
 })
+use({ "NTBBloodbath/doom-one.nvim" })
 use({
   "goolord/alpha-nvim",
   config = get_config("alpha")
@@ -76,4 +83,7 @@ use({
   },
   config = get_config("gitsigns")
 })
-
+use({
+  "folke/trouble.nvim",
+  config = get_config("trouble")
+})

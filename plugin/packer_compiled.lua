@@ -44,8 +44,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/stevenx/.cache/nvim/packer_hererocks/2.0.5/share/lua/5.1/?.lua;/home/stevenx/.cache/nvim/packer_hererocks/2.0.5/share/lua/5.1/?/init.lua;/home/stevenx/.cache/nvim/packer_hererocks/2.0.5/lib/luarocks/rocks-5.1/?.lua;/home/stevenx/.cache/nvim/packer_hererocks/2.0.5/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/stevenx/.cache/nvim/packer_hererocks/2.0.5/lib/lua/5.1/?.so"
+local package_path_str = "/home/sx/.cache/nvim/packer_hererocks/2.0.5/share/lua/5.1/?.lua;/home/sx/.cache/nvim/packer_hererocks/2.0.5/share/lua/5.1/?/init.lua;/home/sx/.cache/nvim/packer_hererocks/2.0.5/lib/luarocks/rocks-5.1/?.lua;/home/sx/.cache/nvim/packer_hererocks/2.0.5/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/sx/.cache/nvim/packer_hererocks/2.0.5/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -72,137 +72,154 @@ _G.packer_plugins = {
   ["alpha-nvim"] = {
     config = { 'require("config/alpha")' },
     loaded = true,
-    path = "/home/stevenx/.local/share/nvim/site/pack/packer/start/alpha-nvim",
-    url = "https://github.com/goolord/alpha-nvim"
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/alpha-nvim",
+    url = "git@github.com:goolord/alpha-nvim"
   },
   ["circles.nvim"] = {
     config = { 'require("config/circles")' },
     loaded = true,
-    path = "/home/stevenx/.local/share/nvim/site/pack/packer/start/circles.nvim",
-    url = "https://github.com/projekt0n/circles.nvim"
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/circles.nvim",
+    url = "git@github.com:projekt0n/circles.nvim"
   },
   ["cmp-buffer"] = {
     loaded = true,
-    path = "/home/stevenx/.local/share/nvim/site/pack/packer/start/cmp-buffer",
-    url = "https://github.com/hrsh7th/cmp-buffer"
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/cmp-buffer",
+    url = "git@github.com:hrsh7th/cmp-buffer"
   },
   ["cmp-cmdline"] = {
     loaded = true,
-    path = "/home/stevenx/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
-    url = "https://github.com/hrsh7th/cmp-cmdline"
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
+    url = "git@github.com:hrsh7th/cmp-cmdline"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
-    path = "/home/stevenx/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
-    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    url = "git@github.com:hrsh7th/cmp-nvim-lsp"
   },
   ["cmp-path"] = {
     loaded = true,
-    path = "/home/stevenx/.local/share/nvim/site/pack/packer/start/cmp-path",
-    url = "https://github.com/hrsh7th/cmp-path"
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/cmp-path",
+    url = "git@github.com:hrsh7th/cmp-path"
   },
   ["cmp-vsnip"] = {
     loaded = true,
-    path = "/home/stevenx/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
-    url = "https://github.com/hrsh7th/cmp-vsnip"
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
+    url = "git@github.com:hrsh7th/cmp-vsnip"
+  },
+  ["doom-one.nvim"] = {
+    loaded = true,
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/doom-one.nvim",
+    url = "git@github.com:NTBBloodbath/doom-one.nvim"
   },
   ["editorconfig-vim"] = {
     loaded = true,
-    path = "/home/stevenx/.local/share/nvim/site/pack/packer/start/editorconfig-vim",
-    url = "https://github.com/editorconfig/editorconfig-vim"
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/editorconfig-vim",
+    url = "git@github.com:editorconfig/editorconfig-vim"
+  },
+  ["focus.nvim"] = {
+    config = { 'require("config/focus")' },
+    loaded = true,
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/focus.nvim",
+    url = "git@github.com:beauwilliams/focus.nvim"
   },
   ["gitsigns.nvim"] = {
     config = { 'require("config/gitsigns")' },
     loaded = true,
-    path = "/home/stevenx/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
-    url = "https://github.com/lewis6991/gitsigns.nvim"
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "git@github.com:lewis6991/gitsigns.nvim"
   },
   ["nest.nvim"] = {
     loaded = true,
-    path = "/home/stevenx/.local/share/nvim/site/pack/packer/start/nest.nvim",
-    url = "https://github.com/LionC/nest.nvim"
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/nest.nvim",
+    url = "git@github.com:LionC/nest.nvim"
   },
   ["null-ls.nvim"] = {
     config = { 'require("config/null-ls")' },
     loaded = true,
-    path = "/home/stevenx/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
-    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "git@github.com:jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-autopairs"] = {
     config = { 'require("config/autopairs")' },
     loaded = true,
-    path = "/home/stevenx/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
-    url = "https://github.com/windwp/nvim-autopairs"
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "git@github.com:windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
     config = { 'require("config/cmp")' },
     loaded = true,
-    path = "/home/stevenx/.local/share/nvim/site/pack/packer/start/nvim-cmp",
-    url = "https://github.com/hrsh7th/nvim-cmp"
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    url = "git@github.com:hrsh7th/nvim-cmp"
   },
   ["nvim-lspconfig"] = {
     config = { 'require("config/lsp")' },
     loaded = true,
-    path = "/home/stevenx/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
-    url = "https://github.com/neovim/nvim-lspconfig"
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "git@github.com:neovim/nvim-lspconfig"
   },
   ["nvim-tree.lua"] = {
     config = { 'require("config/nvim-tree")' },
     loaded = true,
-    path = "/home/stevenx/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
-    url = "https://github.com/kyazdani42/nvim-tree.lua"
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "git@github.com:kyazdani42/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     config = { 'require("config/treesitter")' },
     loaded = true,
-    path = "/home/stevenx/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
-    url = "https://github.com/nvim-treesitter/nvim-treesitter"
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "git@github.com:nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/home/stevenx/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
-    url = "https://github.com/kyazdani42/nvim-web-devicons"
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "git@github.com:kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/home/stevenx/.local/share/nvim/site/pack/packer/start/packer.nvim",
-    url = "https://github.com/wbthomason/packer.nvim"
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    url = "git@github.com:wbthomason/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/home/stevenx/.local/share/nvim/site/pack/packer/start/plenary.nvim",
-    url = "https://github.com/nvim-lua/plenary.nvim"
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "git@github.com:nvim-lua/plenary.nvim"
   },
   ["space-nvim"] = {
     config = { 'require("config/theme")' },
     loaded = true,
-    path = "/home/stevenx/.local/share/nvim/site/pack/packer/start/space-nvim",
-    url = "https://github.com/Th3Whit3Wolf/space-nvim"
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/space-nvim",
+    url = "git@github.com:Th3Whit3Wolf/space-nvim"
   },
   ["telescope.nvim"] = {
     config = { 'require("config/telescope")' },
     loaded = true,
-    path = "/home/stevenx/.local/share/nvim/site/pack/packer/start/telescope.nvim",
-    url = "https://github.com/nvim-telescope/telescope.nvim"
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "git@github.com:nvim-telescope/telescope.nvim"
+  },
+  ["trouble.nvim"] = {
+    config = { 'require("config/trouble")' },
+    loaded = true,
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "git@github.com:folke/trouble.nvim"
   },
   ["vim-vsnip"] = {
     loaded = true,
-    path = "/home/stevenx/.local/share/nvim/site/pack/packer/start/vim-vsnip",
-    url = "https://github.com/hrsh7th/vim-vsnip"
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/vim-vsnip",
+    url = "git@github.com:hrsh7th/vim-vsnip"
   },
   ["which-key.nvim"] = {
     config = { 'require("config/which-key")' },
     loaded = true,
-    path = "/home/stevenx/.local/share/nvim/site/pack/packer/start/which-key.nvim",
-    url = "https://github.com/folke/which-key.nvim"
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    url = "git@github.com:folke/which-key.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-lspconfig
-time([[Config for nvim-lspconfig]], true)
-require("config/lsp")
-time([[Config for nvim-lspconfig]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+require("config/telescope")
+time([[Config for telescope.nvim]], false)
 -- Config for: nvim-cmp
 time([[Config for nvim-cmp]], true)
 require("config/cmp")
@@ -211,18 +228,26 @@ time([[Config for nvim-cmp]], false)
 time([[Config for which-key.nvim]], true)
 require("config/which-key")
 time([[Config for which-key.nvim]], false)
--- Config for: alpha-nvim
-time([[Config for alpha-nvim]], true)
-require("config/alpha")
-time([[Config for alpha-nvim]], false)
 -- Config for: space-nvim
 time([[Config for space-nvim]], true)
 require("config/theme")
 time([[Config for space-nvim]], false)
+-- Config for: focus.nvim
+time([[Config for focus.nvim]], true)
+require("config/focus")
+time([[Config for focus.nvim]], false)
+-- Config for: alpha-nvim
+time([[Config for alpha-nvim]], true)
+require("config/alpha")
+time([[Config for alpha-nvim]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
 require("config/nvim-tree")
 time([[Config for nvim-tree.lua]], false)
+-- Config for: trouble.nvim
+time([[Config for trouble.nvim]], true)
+require("config/trouble")
+time([[Config for trouble.nvim]], false)
 -- Config for: gitsigns.nvim
 time([[Config for gitsigns.nvim]], true)
 require("config/gitsigns")
@@ -231,14 +256,14 @@ time([[Config for gitsigns.nvim]], false)
 time([[Config for nvim-treesitter]], true)
 require("config/treesitter")
 time([[Config for nvim-treesitter]], false)
+-- Config for: nvim-lspconfig
+time([[Config for nvim-lspconfig]], true)
+require("config/lsp")
+time([[Config for nvim-lspconfig]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 require("config/autopairs")
 time([[Config for nvim-autopairs]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-require("config/telescope")
-time([[Config for telescope.nvim]], false)
 -- Config for: null-ls.nvim
 time([[Config for null-ls.nvim]], true)
 require("config/null-ls")
