@@ -33,11 +33,15 @@ cmp.setup({
   },
   sources = cmp.config.sources({
     { name = "nvim_lsp" },
+    { name = "nvim_lua" },
     { name = "vsnip" },
     { name = "path" },
     { name = "buffer" },
     { name = "rg" }
   }),
+  experimental = {
+    ghost_text = true,
+  },
   cmp.setup.cmdline("/", {
     sources = {
       { name = "buffer" },

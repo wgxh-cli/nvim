@@ -102,6 +102,11 @@ _G.packer_plugins = {
     path = "/home/sx/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "git@github.com:hrsh7th/cmp-nvim-lsp"
   },
+  ["cmp-nvim-lua"] = {
+    loaded = true,
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
+    url = "git@github.com:hrsh7th/cmp-nvim-lua"
+  },
   ["cmp-path"] = {
     loaded = true,
     path = "/home/sx/.local/share/nvim/site/pack/packer/start/cmp-path",
@@ -277,10 +282,6 @@ time([[Config for trouble.nvim]], false)
 time([[Config for gitsigns.nvim]], true)
 require("config/gitsigns")
 time([[Config for gitsigns.nvim]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-require("config/treesitter")
-time([[Config for nvim-treesitter]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
 require("config/nvim-tree")
@@ -289,6 +290,10 @@ time([[Config for nvim-tree.lua]], false)
 time([[Config for null-ls.nvim]], true)
 require("config/null-ls")
 time([[Config for null-ls.nvim]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+require("config/treesitter")
+time([[Config for nvim-treesitter]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 require("config/autopairs")
