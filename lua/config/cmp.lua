@@ -36,6 +36,7 @@ cmp.setup({
     { name = "vsnip" },
     { name = "path" },
     { name = "buffer" },
+    { name = "rg" }
   }),
   cmp.setup.cmdline("/", {
     sources = {

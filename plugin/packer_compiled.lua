@@ -75,6 +75,12 @@ _G.packer_plugins = {
     path = "/home/sx/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "git@github.com:goolord/alpha-nvim"
   },
+  ["barbar.nvim"] = {
+    config = { 'require("config/barbar")' },
+    loaded = true,
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/barbar.nvim",
+    url = "git@github.com:romgrk/barbar.nvim"
+  },
   ["circles.nvim"] = {
     config = { 'require("config/circles")' },
     loaded = true,
@@ -100,6 +106,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/sx/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "git@github.com:hrsh7th/cmp-path"
+  },
+  ["cmp-rg"] = {
+    loaded = true,
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/cmp-rg",
+    url = "git@github.com:lukas-reineke/cmp-rg"
   },
   ["cmp-vsnip"] = {
     loaded = true,
@@ -184,6 +195,11 @@ _G.packer_plugins = {
     path = "/home/sx/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "git@github.com:nvim-lua/plenary.nvim"
   },
+  ["rose-pine"] = {
+    loaded = true,
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/rose-pine",
+    url = "git@github.com:rose-pine/neovim"
+  },
   ["space-nvim"] = {
     config = { 'require("config/theme")' },
     loaded = true,
@@ -202,6 +218,11 @@ _G.packer_plugins = {
     path = "/home/sx/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "git@github.com:folke/trouble.nvim"
   },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "git@github.com:tpope/vim-surround"
+  },
   ["vim-vsnip"] = {
     loaded = true,
     path = "/home/sx/.local/share/nvim/site/pack/packer/start/vim-vsnip",
@@ -216,10 +237,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-require("config/telescope")
-time([[Config for telescope.nvim]], false)
+-- Config for: nvim-lspconfig
+time([[Config for nvim-lspconfig]], true)
+require("config/lsp")
+time([[Config for nvim-lspconfig]], false)
 -- Config for: nvim-cmp
 time([[Config for nvim-cmp]], true)
 require("config/cmp")
@@ -228,10 +249,14 @@ time([[Config for nvim-cmp]], false)
 time([[Config for which-key.nvim]], true)
 require("config/which-key")
 time([[Config for which-key.nvim]], false)
--- Config for: space-nvim
-time([[Config for space-nvim]], true)
-require("config/theme")
-time([[Config for space-nvim]], false)
+-- Config for: barbar.nvim
+time([[Config for barbar.nvim]], true)
+require("config/barbar")
+time([[Config for barbar.nvim]], false)
+-- Config for: circles.nvim
+time([[Config for circles.nvim]], true)
+require("config/circles")
+time([[Config for circles.nvim]], false)
 -- Config for: focus.nvim
 time([[Config for focus.nvim]], true)
 require("config/focus")
@@ -240,10 +265,10 @@ time([[Config for focus.nvim]], false)
 time([[Config for alpha-nvim]], true)
 require("config/alpha")
 time([[Config for alpha-nvim]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-require("config/nvim-tree")
-time([[Config for nvim-tree.lua]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+require("config/telescope")
+time([[Config for telescope.nvim]], false)
 -- Config for: trouble.nvim
 time([[Config for trouble.nvim]], true)
 require("config/trouble")
@@ -256,22 +281,22 @@ time([[Config for gitsigns.nvim]], false)
 time([[Config for nvim-treesitter]], true)
 require("config/treesitter")
 time([[Config for nvim-treesitter]], false)
--- Config for: nvim-lspconfig
-time([[Config for nvim-lspconfig]], true)
-require("config/lsp")
-time([[Config for nvim-lspconfig]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-require("config/autopairs")
-time([[Config for nvim-autopairs]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+require("config/nvim-tree")
+time([[Config for nvim-tree.lua]], false)
 -- Config for: null-ls.nvim
 time([[Config for null-ls.nvim]], true)
 require("config/null-ls")
 time([[Config for null-ls.nvim]], false)
--- Config for: circles.nvim
-time([[Config for circles.nvim]], true)
-require("config/circles")
-time([[Config for circles.nvim]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+require("config/autopairs")
+time([[Config for nvim-autopairs]], false)
+-- Config for: space-nvim
+time([[Config for space-nvim]], true)
+require("config/theme")
+time([[Config for space-nvim]], false)
 if should_profile then save_profiles() end
 
 end)

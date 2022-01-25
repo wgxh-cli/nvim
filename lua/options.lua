@@ -3,7 +3,6 @@ local opt = vim.opt
 opt.number = true
 opt.relativenumber = true
 opt.termguicolors = true
-opt.signcolumn = "yes"
 opt.hidden = true
 opt.undofile = true
 opt.backup = false

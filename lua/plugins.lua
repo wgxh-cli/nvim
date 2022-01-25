@@ -24,12 +24,14 @@ use({ "hrsh7th/cmp-path" })
 use({ "hrsh7th/cmp-cmdline" })
 use({ "hrsh7th/cmp-vsnip" })
 use({ "hrsh7th/vim-vsnip" })
+use({ "lukas-reineke/cmp-rg" })
 use({
   "jose-elias-alvarez/null-ls.nvim",
   config = get_config("null-ls"),
 })
 
 use({ "editorconfig/editorconfig-vim" })
+use({ "tpope/vim-surround" })
 use({
   "nvim-treesitter/nvim-treesitter",
   run = "TSUpdate",
@@ -69,6 +71,10 @@ use({
 })
 use({ "NTBBloodbath/doom-one.nvim" })
 use({
+  "rose-pine/neovim",
+  as = "rose-pine"
+})
+use({
   "goolord/alpha-nvim",
   config = get_config("alpha")
 })
@@ -87,3 +93,9 @@ use({
   "folke/trouble.nvim",
   config = get_config("trouble")
 })
+use({
+  'romgrk/barbar.nvim',
+  requires = {'kyazdani42/nvim-web-devicons'},
+  config = get_config("barbar"),
+})
+
