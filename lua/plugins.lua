@@ -79,6 +79,7 @@ use({
   "goolord/alpha-nvim",
   config = get_config("alpha")
 })
+use({ 'EdenEast/nightfox.nvim' })
 use({
   "projekt0n/circles.nvim",
   config = get_config("circles"),
