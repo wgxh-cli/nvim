@@ -79,21 +79,9 @@ use({
   "goolord/alpha-nvim",
   config = get_config("alpha")
 })
-use({ 'EdenEast/nightfox.nvim' })
 use({
   "projekt0n/circles.nvim",
   config = get_config("circles"),
-})
-use({
-  'lewis6991/gitsigns.nvim',
-  requires = {
-    'nvim-lua/plenary.nvim'
-  },
-  config = get_config("gitsigns")
-})
-use({
-  "folke/trouble.nvim",
-  config = get_config("trouble")
 })
 use({
   'romgrk/barbar.nvim',

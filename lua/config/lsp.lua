@@ -1,10 +1,7 @@
 local lsp = require("lspconfig")
 local wk = require("which-key")
 local add_server = function(name)
-  local capabilities = vim.lsp.protocol.make_client_capabilities()
-  capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
   lsp[name].setup({
-    capabilities = capabilities,
     on_attach = function()
       vim.g.maplocalleader = ","
       local buf = vim.lsp.buf
