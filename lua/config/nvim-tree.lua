@@ -13,7 +13,6 @@ require("nvim-tree").setup({
   },
   view = {
     width = 30,
-    auto_resize = true,
     number = true,
     relativenumber = true,
     signcolumn = "number",

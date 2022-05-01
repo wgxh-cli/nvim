@@ -17,6 +17,13 @@ wk.register({
       j = { "<C-w><C-j>", "Bottom window" },
       k = { "<C-w><C-k>", "Top window" },
       l = { "<C-w><C-l>", "Right window" },
-    }
+    },
+    c = {
+      name = "Quickfix",
+      o = { ":copen<CR>", "Open quickfix list" },
+      j = { ":cnext<CR>", "Goto next item" },
+      k = { ":cprev<CR>", "Goto previous item" },
+      c = { ":cclose<CR>", "Close quickfix list" },
+    },
   },
 })

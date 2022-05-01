@@ -12,4 +12,3 @@ opt.list = true
 opt.timeoutlen = 0
 opt.updatetime = 0
 opt.scrolloff = 14
-opt.guicursor = "a:block"

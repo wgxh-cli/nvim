@@ -15,6 +15,9 @@ use({
   config = get_config("lsp"),
 })
 use({
+  "ray-x/lsp_signature.nvim",
+})
+use({
   "hrsh7th/nvim-cmp",
   config = get_config("cmp"),
 })
@@ -27,8 +30,8 @@ use({ "hrsh7th/cmp-nvim-lua" })
 use({ "hrsh7th/vim-vsnip" })
 use({ "lukas-reineke/cmp-rg" })
 use({
-  "jose-elias-alvarez/null-ls.nvim",
-  config = get_config("null-ls"),
+  "mfussenegger/nvim-lint",
+  config = get_config("nvim-lint"),
 })
 
 use({ "editorconfig/editorconfig-vim" })
@@ -71,10 +74,8 @@ use({
   config = get_config("theme")
 })
 use({ "NTBBloodbath/doom-one.nvim" })
-use({
-  "rose-pine/neovim",
-  as = "rose-pine"
-})
+use({ "Mofiqul/vscode.nvim" })
+use({ "shaunsingh/nord.nvim" })
 use({
   "goolord/alpha-nvim",
   config = get_config("alpha")
@@ -87,5 +88,8 @@ use({
   'romgrk/barbar.nvim',
   requires = {'kyazdani42/nvim-web-devicons'},
   config = get_config("barbar"),
+})
+use({
+  "eddyekofo94/gruvbox-flat.nvim",
 })
 
