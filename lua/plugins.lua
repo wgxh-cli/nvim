@@ -33,6 +33,12 @@ use({
   "mfussenegger/nvim-lint",
   config = get_config("nvim-lint"),
 })
+use({
+  "nvim-lua/lsp_extensions.nvim",
+})
+use({
+  "onsails/lspkind.nvim",
+})
 
 use({ "editorconfig/editorconfig-vim" })
 use({ "tpope/vim-surround" })
@@ -85,11 +91,9 @@ use({
   config = get_config("circles"),
 })
 use({
-  'romgrk/barbar.nvim',
-  requires = {'kyazdani42/nvim-web-devicons'},
-  config = get_config("barbar"),
-})
-use({
   "eddyekofo94/gruvbox-flat.nvim",
 })
-
+use({
+  "glepnir/indent-guides.nvim",
+  config = get_config("indent-guides"),
+})

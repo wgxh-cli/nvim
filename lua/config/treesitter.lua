@@ -5,7 +5,4 @@ tsc.setup({
   highlight = {
     enable = true,
   },
-  indent = {
-    enable = true,
-  },
 })

@@ -75,12 +75,6 @@ _G.packer_plugins = {
     path = "/home/sx/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "git@github.com:goolord/alpha-nvim"
   },
-  ["barbar.nvim"] = {
-    config = { 'require("config/barbar")' },
-    loaded = true,
-    path = "/home/sx/.local/share/nvim/site/pack/packer/start/barbar.nvim",
-    url = "git@github.com:romgrk/barbar.nvim"
-  },
   ["circles.nvim"] = {
     config = { 'require("config/circles")' },
     loaded = true,
@@ -138,10 +132,31 @@ _G.packer_plugins = {
     path = "/home/sx/.local/share/nvim/site/pack/packer/start/focus.nvim",
     url = "git@github.com:beauwilliams/focus.nvim"
   },
+  ["gruvbox-flat.nvim"] = {
+    loaded = true,
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/gruvbox-flat.nvim",
+    url = "git@github.com:eddyekofo94/gruvbox-flat.nvim"
+  },
+  ["indent-guides.nvim"] = {
+    config = { 'require("config/indent-guides")' },
+    loaded = true,
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/indent-guides.nvim",
+    url = "git@github.com:glepnir/indent-guides.nvim"
+  },
+  ["lsp_extensions.nvim"] = {
+    loaded = true,
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/lsp_extensions.nvim",
+    url = "git@github.com:nvim-lua/lsp_extensions.nvim"
+  },
   ["lsp_signature.nvim"] = {
     loaded = true,
     path = "/home/sx/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
     url = "git@github.com:ray-x/lsp_signature.nvim"
+  },
+  ["lspkind.nvim"] = {
+    loaded = true,
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
+    url = "git@github.com:onsails/lspkind.nvim"
   },
   ["nest.nvim"] = {
     loaded = true,
@@ -240,58 +255,58 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-lspconfig
-time([[Config for nvim-lspconfig]], true)
-require("config/lsp")
-time([[Config for nvim-lspconfig]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-require("config/nvim-tree")
-time([[Config for nvim-tree.lua]], false)
--- Config for: which-key.nvim
-time([[Config for which-key.nvim]], true)
-require("config/which-key")
-time([[Config for which-key.nvim]], false)
--- Config for: space-nvim
-time([[Config for space-nvim]], true)
-require("config/theme")
-time([[Config for space-nvim]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-require("config/treesitter")
-time([[Config for nvim-treesitter]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-require("config/autopairs")
-time([[Config for nvim-autopairs]], false)
--- Config for: alpha-nvim
-time([[Config for alpha-nvim]], true)
-require("config/alpha")
-time([[Config for alpha-nvim]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-require("config/telescope")
-time([[Config for telescope.nvim]], false)
 -- Config for: nvim-cmp
 time([[Config for nvim-cmp]], true)
 require("config/cmp")
 time([[Config for nvim-cmp]], false)
--- Config for: barbar.nvim
-time([[Config for barbar.nvim]], true)
-require("config/barbar")
-time([[Config for barbar.nvim]], false)
--- Config for: focus.nvim
-time([[Config for focus.nvim]], true)
-require("config/focus")
-time([[Config for focus.nvim]], false)
--- Config for: circles.nvim
-time([[Config for circles.nvim]], true)
-require("config/circles")
-time([[Config for circles.nvim]], false)
+-- Config for: indent-guides.nvim
+time([[Config for indent-guides.nvim]], true)
+require("config/indent-guides")
+time([[Config for indent-guides.nvim]], false)
 -- Config for: nvim-lint
 time([[Config for nvim-lint]], true)
 require("config/nvim-lint")
 time([[Config for nvim-lint]], false)
+-- Config for: which-key.nvim
+time([[Config for which-key.nvim]], true)
+require("config/which-key")
+time([[Config for which-key.nvim]], false)
+-- Config for: nvim-lspconfig
+time([[Config for nvim-lspconfig]], true)
+require("config/lsp")
+time([[Config for nvim-lspconfig]], false)
+-- Config for: space-nvim
+time([[Config for space-nvim]], true)
+require("config/theme")
+time([[Config for space-nvim]], false)
+-- Config for: alpha-nvim
+time([[Config for alpha-nvim]], true)
+require("config/alpha")
+time([[Config for alpha-nvim]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+require("config/nvim-tree")
+time([[Config for nvim-tree.lua]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+require("config/telescope")
+time([[Config for telescope.nvim]], false)
+-- Config for: circles.nvim
+time([[Config for circles.nvim]], true)
+require("config/circles")
+time([[Config for circles.nvim]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+require("config/treesitter")
+time([[Config for nvim-treesitter]], false)
+-- Config for: focus.nvim
+time([[Config for focus.nvim]], true)
+require("config/focus")
+time([[Config for focus.nvim]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+require("config/autopairs")
+time([[Config for nvim-autopairs]], false)
 if should_profile then save_profiles() end
 
 end)

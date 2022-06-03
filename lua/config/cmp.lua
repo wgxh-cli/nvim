@@ -1,4 +1,5 @@
 local cmp = require("cmp")
+local lspkind = require("lspkind")
 
 cmp.setup({
   snippet = {
@@ -41,6 +42,11 @@ cmp.setup({
   }),
   experimental = {
     ghost_text = true,
+  },
+  formatting = {
+    format = lspkind.cmp_format({
+      mode = 'symbol_text',
+    }),
   },
   cmp.setup.cmdline("/", {
     sources = {
