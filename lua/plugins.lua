@@ -39,6 +39,10 @@ use({
 use({
   "onsails/lspkind.nvim",
 })
+use({
+  "folke/trouble.nvim",
+  config = get_config("trouble"),
+})
 
 use({ "editorconfig/editorconfig-vim" })
 use({ "tpope/vim-surround" })
@@ -46,6 +50,9 @@ use({
   "nvim-treesitter/nvim-treesitter",
   run = "TSUpdate",
   config = get_config("treesitter"),
+})
+use({
+  "p00f/nvim-ts-rainbow"
 })
 use({ "LionC/nest.nvim" })
 use({
@@ -96,4 +103,11 @@ use({
 use({
   "glepnir/indent-guides.nvim",
   config = get_config("indent-guides"),
+})
+use({
+  "rlane/pounce.nvim",
+  config = get_config("pounce"),
+})
+use({
+  "olimorris/onedarkpro.nvim",
 })

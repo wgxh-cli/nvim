@@ -5,4 +5,7 @@ tsc.setup({
   highlight = {
     enable = true,
   },
+  rainbow = {
+    enable = true,
+  }
 })

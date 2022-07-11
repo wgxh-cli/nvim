@@ -204,10 +204,20 @@ _G.packer_plugins = {
     path = "/home/sx/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "git@github.com:nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-ts-rainbow"] = {
+    loaded = true,
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow",
+    url = "git@github.com:p00f/nvim-ts-rainbow"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/sx/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "git@github.com:kyazdani42/nvim-web-devicons"
+  },
+  ["onedarkpro.nvim"] = {
+    loaded = true,
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/onedarkpro.nvim",
+    url = "git@github.com:olimorris/onedarkpro.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -218,6 +228,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/sx/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "git@github.com:nvim-lua/plenary.nvim"
+  },
+  ["pounce.nvim"] = {
+    config = { 'require("config/pounce")' },
+    loaded = true,
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/pounce.nvim",
+    url = "git@github.com:rlane/pounce.nvim"
   },
   ["space-nvim"] = {
     config = { 'require("config/theme")' },
@@ -230,6 +246,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/sx/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "git@github.com:nvim-telescope/telescope.nvim"
+  },
+  ["trouble.nvim"] = {
+    config = { 'require("config/trouble")' },
+    loaded = true,
+    path = "/home/sx/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "git@github.com:folke/trouble.nvim"
   },
   ["vim-surround"] = {
     loaded = true,
@@ -255,58 +277,66 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-cmp
-time([[Config for nvim-cmp]], true)
-require("config/cmp")
-time([[Config for nvim-cmp]], false)
--- Config for: indent-guides.nvim
-time([[Config for indent-guides.nvim]], true)
-require("config/indent-guides")
-time([[Config for indent-guides.nvim]], false)
--- Config for: nvim-lint
-time([[Config for nvim-lint]], true)
-require("config/nvim-lint")
-time([[Config for nvim-lint]], false)
--- Config for: which-key.nvim
-time([[Config for which-key.nvim]], true)
-require("config/which-key")
-time([[Config for which-key.nvim]], false)
--- Config for: nvim-lspconfig
-time([[Config for nvim-lspconfig]], true)
-require("config/lsp")
-time([[Config for nvim-lspconfig]], false)
--- Config for: space-nvim
-time([[Config for space-nvim]], true)
-require("config/theme")
-time([[Config for space-nvim]], false)
--- Config for: alpha-nvim
-time([[Config for alpha-nvim]], true)
-require("config/alpha")
-time([[Config for alpha-nvim]], false)
+-- Config for: trouble.nvim
+time([[Config for trouble.nvim]], true)
+require("config/trouble")
+time([[Config for trouble.nvim]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
 require("config/nvim-tree")
 time([[Config for nvim-tree.lua]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-require("config/telescope")
-time([[Config for telescope.nvim]], false)
--- Config for: circles.nvim
-time([[Config for circles.nvim]], true)
-require("config/circles")
-time([[Config for circles.nvim]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-require("config/treesitter")
-time([[Config for nvim-treesitter]], false)
--- Config for: focus.nvim
-time([[Config for focus.nvim]], true)
-require("config/focus")
-time([[Config for focus.nvim]], false)
+-- Config for: indent-guides.nvim
+time([[Config for indent-guides.nvim]], true)
+require("config/indent-guides")
+time([[Config for indent-guides.nvim]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 require("config/autopairs")
 time([[Config for nvim-autopairs]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+require("config/treesitter")
+time([[Config for nvim-treesitter]], false)
+-- Config for: pounce.nvim
+time([[Config for pounce.nvim]], true)
+require("config/pounce")
+time([[Config for pounce.nvim]], false)
+-- Config for: which-key.nvim
+time([[Config for which-key.nvim]], true)
+require("config/which-key")
+time([[Config for which-key.nvim]], false)
+-- Config for: focus.nvim
+time([[Config for focus.nvim]], true)
+require("config/focus")
+time([[Config for focus.nvim]], false)
+-- Config for: space-nvim
+time([[Config for space-nvim]], true)
+require("config/theme")
+time([[Config for space-nvim]], false)
+-- Config for: nvim-cmp
+time([[Config for nvim-cmp]], true)
+require("config/cmp")
+time([[Config for nvim-cmp]], false)
+-- Config for: circles.nvim
+time([[Config for circles.nvim]], true)
+require("config/circles")
+time([[Config for circles.nvim]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+require("config/telescope")
+time([[Config for telescope.nvim]], false)
+-- Config for: nvim-lspconfig
+time([[Config for nvim-lspconfig]], true)
+require("config/lsp")
+time([[Config for nvim-lspconfig]], false)
+-- Config for: nvim-lint
+time([[Config for nvim-lint]], true)
+require("config/nvim-lint")
+time([[Config for nvim-lint]], false)
+-- Config for: alpha-nvim
+time([[Config for alpha-nvim]], true)
+require("config/alpha")
+time([[Config for alpha-nvim]], false)
 if should_profile then save_profiles() end
 
 end)
