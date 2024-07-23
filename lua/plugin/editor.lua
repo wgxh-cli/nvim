@@ -105,13 +105,28 @@ return {
         lazygit:toggle()
       end
 
+      local bash = Terminal:new({
+        cmd = "bash",
+        hidden = true,
+        direction = "float",
+        display_name = "bash",
+        on_open = function(term)
+          vim.cmd("startinsert!")
+        end
+      })
+      local function open_bash()
+        bash:toggle()
+      end
+
       wk.add({
-        { "<leader>tg", open_lazygit }
+        { "<leader>tg", open_lazygit, desc = "Open lazygit" },
+        { "<leader>tc", open_bash, desc = "Open a new floating terminal with `bash` as its shell" },
       })
     end,
     keys = {
       { "<esc>", [[<C-\><C-n>]], mode = "t" },
       { "<leader>tg", desc = "Open lazygit" },
+      { "<leader>tc", desc = "Open a new floating terminal with `bash` as its shell" }
     },
-  }
+  },
 }
