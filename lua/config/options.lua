@@ -8,6 +8,7 @@ o.scrolloff = 10
 o.cursorline = true
 o.timeoutlen = 300
 o.updatetime = 0
+o.signcolumn = "yes"
 
 vim.g.mapleader = " "
 vim.g.localmapleader = ","
