@@ -76,5 +76,42 @@ return {
   {
     "lewis6991/gitsigns.nvim",
     opts = {},
+  },
+  {
+    "akinsho/toggleterm.nvim",
+    version = "*",
+    cmds = { "ToggleTerm", "TermExec" },
+    config = function ()
+      local wk = require("which-key")
+
+      require("toggleterm").setup {
+        winbar = {
+          enabled = true,
+        }
+      }
+
+      local Terminal = require("toggleterm.terminal").Terminal
+      local lazygit = Terminal:new({
+        cmd = "lazygit",
+        direction = "float",
+        hidden = true,
+        display_name = "Lazygit",
+        on_open = function (term)
+          vim.cmd("startinsert!")
+          vim.api.nvim_buf_set_keymap(term.bufnr, "i", "q", "<cmd>close<CR>", { noremap = true, silent = true })
+        end
+      })
+      local function open_lazygit()
+        lazygit:toggle()
+      end
+
+      wk.add({
+        { "<leader>tg", open_lazygit }
+      })
+    end,
+    keys = {
+      { "<esc>", [[<C-\><C-n>]], mode = "t" },
+      { "<leader>tg", desc = "Open lazygit" },
+    },
   }
 }
