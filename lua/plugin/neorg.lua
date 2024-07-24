@@ -16,6 +16,18 @@ return {
             default_workspace = "notes",
           }
         },
+        ["core.neorgcmd"] = {},
+        ["core.autocommands"] = {},
+        ["core.keybinds"] = {
+          config = {
+            default_keybinds = true,
+          }
+        },
+        ["core.latex.renderer"] = {
+          config = {
+            render_on_enter = true,
+          }
+        }
       },
     },
     config = function (_, opts)
@@ -27,6 +39,7 @@ return {
     dependencies = {
       { "nvim-lua/plenary.nvim" },
       { "nvim-treesitter/nvim-treesitter" },
+      { "3rd/image.nvim" },
     },
   }
 }

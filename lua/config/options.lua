@@ -9,6 +9,7 @@ o.cursorline = true
 o.timeoutlen = 300
 o.updatetime = 0
 o.signcolumn = "yes"
+o.autochdir = true
 
 vim.g.mapleader = " "
-vim.g.localmapleader = ","
+vim.g.maplocalleader = ","

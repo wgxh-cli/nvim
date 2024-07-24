@@ -104,6 +104,7 @@ return {
         on_open = function (term)
           vim.cmd("startinsert!")
           vim.api.nvim_buf_set_keymap(term.bufnr, "i", "q", "<cmd>close<CR>", { noremap = true, silent = true })
+          vim.api.nvim_buf_set_keymap(term.bufnr, "i", "<esc>", "", { noremap = true, silent = true })
         end
       })
       local function open_lazygit()
@@ -123,15 +124,62 @@ return {
         bash:toggle()
       end
 
+      local fanyi = Terminal:new({
+        cmd = [[fanyi hello]],
+        hidden = true,
+        direction = "float",
+        display_name = "fanyi",
+        close_on_exit = false,
+      })
+      local function translate_words()
+        local current_mode = vim.api.nvim_get_mode().mode
+
+        if current_mode == "n" then
+          fanyi.cmd = "fanyi " .. vim.fn.expand("<cword>")
+          fanyi:toggle()
+        end
+        -- if current_mode == "v" then
+        --   local vstart = vim.fn.getpos("'<")
+        --   local vend = vim.fn.getpos("'>")
+        --
+        --   local bufnr = vim.api.nvim_get_current_buf()
+        --   local text = vim.api.nvim_buf_get_text(bufnr, vstart[2], vstart[3], vend[2], vend[3], {})
+        --
+        --   fanyi.cmd = "fanyi " .. ""
+        --   fanyi:toggle()
+        -- end
+      end
+      local function translate_words_ask()
+        ---@type string
+        local words = vim.fn.input("Fanyi", "", "file")
+
+        fanyi.cmd = "fanyi " .. words
+        fanyi:toggle()
+      end
+
       wk.add({
         { "<leader>tg", open_lazygit, desc = "Open lazygit" },
         { "<leader>tc", open_bash, desc = "Open a new floating terminal with `bash` as its shell" },
+        { "<leader>tf", translate_words, mode = { "n", "v" }, desc = "Translate words selected" },
+        { "<leader>tt", translate_words_ask, mode = { "n", "v" }, desc = "Translate specified words" },
       })
     end,
     keys = {
       { "<esc>", [[<C-\><C-n>]], mode = "t" },
       { "<leader>tg", desc = "Open lazygit" },
-      { "<leader>tc", desc = "Open a new floating terminal with `bash` as its shell" }
+      { "<leader>tc", desc = "Open a new floating terminal with `bash` as its shell" },
+      { "<leader>tf", desc = "Translate words", mode = { "n", "v" } },
+      { "<leader>tt", mode = { "n", "v" }, desc = "Translate specified words" },
     },
   },
+  {
+    "MagicDuck/grug-far.nvim",
+    config = function ()
+      require("grug-far").setup {}
+    end,
+    cmd = "GrugFar",
+    keys = {
+      { "<leader>r", ":GrugFar<CR>", desc = "Search and replace with `grug-far.nvim`" },
+    },
+  }
 }
