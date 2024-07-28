@@ -181,5 +181,9 @@ return {
     keys = {
       { "<leader>r", ":GrugFar<CR>", desc = "Search and replace with `grug-far.nvim`" },
     },
+  },
+  {
+    "RRethy/vim-illuminate",
+    lazy = false,
   }
 }
