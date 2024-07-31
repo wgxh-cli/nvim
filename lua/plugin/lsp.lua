@@ -23,7 +23,12 @@ return {
       lspconfig.tsserver.setup {
         capabilities = capabilities
       }
-      lspconfig.unocss.setup {}
+      lspconfig.unocss.setup {
+        capabilities = capabilities
+      }
+      lspconfig.volar.setup {
+        capabilities = capabilities
+      }
     end
   },
   {
