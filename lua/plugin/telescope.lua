@@ -14,9 +14,9 @@ return {
       require("telescope").load_extension("frecency")
     end,
     keys = {
-      { "<leader>fd", require("telescope.builtin").fd, desc = "Find file" },
-      { "<leader>ff", require("telescope.builtin").find_files, desc = "Find file" },
-      { "<leader>fs", require("telescope.builtin").builtin, desc = "Use builtin finder" },
+      { "<leader>fd", function () require("telescope.builtin").fd() end, desc = "Find file" },
+      { "<leader>ff", function () require("telescope.builtin").find_files() end, desc = "Find file" },
+      { "<leader>fs", function () require("telescope.builtin").builtin() end, desc = "Use builtin finder" },
       { "<leader>fp", function () require("telescope").extensions.projects.projects {} end, desc = "Use builtin finder" },
       { "<leader>fr", "<cmd>Telescope frecency<CR>", desc = "Find recent entries" }
     },

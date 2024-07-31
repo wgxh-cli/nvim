@@ -20,6 +20,10 @@ return {
       lspconfig.tsserver.setup {
         capabilities = capabilities
       }
+      lspconfig.tsserver.setup {
+        capabilities = capabilities
+      }
+      lspconfig.unocss.setup {}
     end
   },
   {
