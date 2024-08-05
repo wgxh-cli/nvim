@@ -29,6 +29,9 @@ return {
       lspconfig.volar.setup {
         capabilities = capabilities
       }
+      lspconfig.clangd.setup {
+        capabilities = capabilities
+      }
     end
   },
   {
