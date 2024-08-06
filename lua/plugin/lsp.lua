@@ -14,24 +14,29 @@ return {
     config = function()
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
       local lspconfig = require("lspconfig")
-      lspconfig.lua_ls.setup {
-        capabilities = capabilities,
-      }
-      lspconfig.tsserver.setup {
-        capabilities = capabilities
-      }
-      lspconfig.tsserver.setup {
-        capabilities = capabilities
-      }
-      lspconfig.unocss.setup {
-        capabilities = capabilities
-      }
-      lspconfig.volar.setup {
-        capabilities = capabilities
-      }
-      lspconfig.clangd.setup {
-        capabilities = capabilities
-      }
+      local on_attach = function ()
+        local wk = require("which-key")
+        wk.add {
+          { "J", function () vim.diagnostic.open_float() end, desc = "Open float menu" }
+        }
+      end
+
+      --- @param name string
+      --- @param opts table?
+      local function setup_custom_ls(name, opts)
+        local lsp_opts = {
+          capabilities = capabilities,
+          on_attach = on_attach,
+        }
+        local fopts = vim.tbl_deep_extend('force', opts or {}, lsp_opts);
+        lspconfig[name].setup(fopts)
+      end
+
+      setup_custom_ls("lua_ls")
+      setup_custom_ls("tsserver")
+      setup_custom_ls("unocss")
+      setup_custom_ls("volar")
+      setup_custom_ls("clangd")
     end
   },
   {
