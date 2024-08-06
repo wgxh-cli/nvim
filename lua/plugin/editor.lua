@@ -21,6 +21,7 @@ return {
         filetypes = {
           "haskell",
           "yaml",
+          "dashboard",
         }
       }
     },
