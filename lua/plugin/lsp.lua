@@ -12,6 +12,7 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
+      local mason_registry = require("mason-registry");
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
       local lspconfig = require("lspconfig")
       local on_attach = function ()
@@ -33,7 +34,18 @@ return {
       end
 
       setup_custom_ls("lua_ls")
-      setup_custom_ls("tsserver")
+      setup_custom_ls("ts_ls", {
+        init_options = {
+          plugins = {
+            {
+              name = "@vue/typescript-plugin",
+              location = mason_registry.get_package("vue-language-server"):get_install_path() .. "/node_modules/@vue/language-server",
+              languages = { "vue" },
+            }
+          }
+        },
+        filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+      })
       setup_custom_ls("unocss")
       setup_custom_ls("volar")
       setup_custom_ls("clangd")
