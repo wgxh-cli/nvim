@@ -18,7 +18,7 @@ return {
       local on_attach = function ()
         local wk = require("which-key")
         wk.add {
-          { "J", function () vim.diagnostic.open_float() end, desc = "Open float menu" }
+          { "D", function () vim.diagnostic.open_float() end, desc = "Open float menu" }
         }
       end
 
