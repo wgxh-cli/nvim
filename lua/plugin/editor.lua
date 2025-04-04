@@ -198,5 +198,15 @@ return {
   {
     "RRethy/vim-illuminate",
     lazy = false,
+  },
+  {
+    "nvim-tree/nvim-tree.lua",
+    lazy = false,
+    opts = {},
+    keys = {
+      { "<leader>ef", "<cmd>NvimTreeFocus<cr>", desc = "Focus on nvim-tree for file exploring" },
+      { "<leader>eo", "<cmd>NvimTreeOpen<cr>", desc = "Open nvim-tree for file exploring" },
+      { "<leader>ec", "<cmd>NvimTreeClose<cr>", desc = "Close nvim-tree" },
+    },
   }
 }

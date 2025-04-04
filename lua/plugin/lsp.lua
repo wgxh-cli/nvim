@@ -49,6 +49,7 @@ return {
       setup_custom_ls("unocss")
       setup_custom_ls("volar")
       setup_custom_ls("clangd")
+      setup_custom_ls("zls")
     end
   },
   {
