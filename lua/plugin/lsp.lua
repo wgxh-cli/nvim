@@ -1,4 +1,15 @@
-return {
+local M = {}
+
+local on_attach = function ()
+  local wk = require("which-key")
+  wk.add {
+    { "J", function () vim.diagnostic.open_float() end, desc = "Open float menu" }
+  }
+end
+
+M.on_attach = on_attach
+
+M = vim.tbl_deep_extend('keep', M, {
   {
     "williamboman/mason.nvim",
     opts = {},
@@ -15,12 +26,10 @@ return {
       local mason_registry = require("mason-registry");
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
       local lspconfig = require("lspconfig")
-      local on_attach = function ()
-        local wk = require("which-key")
-        wk.add {
-          { "D", function () vim.diagnostic.open_float() end, desc = "Open float menu" }
-        }
-      end
+
+      vim.diagnostic.config {
+        -- virtual_lines = true,
+      }
 
       --- @param name string
       --- @param opts table?
@@ -39,7 +48,7 @@ return {
           plugins = {
             {
               name = "@vue/typescript-plugin",
-              location = mason_registry.get_package("vue-language-server"):get_install_path() .. "/node_modules/@vue/language-server",
+              -- location = mason_registry.get_package("vue-language-server"):get_receipt() .. "/node_modules/@vue/language-server",
               languages = { "vue" },
             }
           }
@@ -93,4 +102,6 @@ return {
       { "<leader>cl", "<cmd>Trouble lsp toggle focus=false win.position=right<cr>", desc = "Lsp Refs / Defs" },
     },
   }
-}
+})
+
+return M
